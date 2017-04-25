@@ -3,18 +3,51 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-.ball_chain_div {
+.inline_block {
+	display: inline-block;
+	width: 49%;
 
 }
+.ball_chain_div {
+	
+}
 .assistance_tube_div {
-
+	background-color: lightgrey;
 }
 .expandable_hook_div {
 
 }
-.noodle_div{
-	
+.noodle_div {
+	background-color: lightgrey;
+}
+.ball_chain_text {
+
+}
+.ball_chain_img {
+
+}
+.assistance_tube_img {
+
+}
+.assistance_tube_text {
+
+}
+.expandable_hook_text {
+
+}
+.expandable_hook_img {
+
+}
+.noodle_img {
+
+}
+.noodle_text {
+
+}
+.products_div {
+	width: 80%;
+	border: 1px solid black;
+	margin: auto;
 }
 
 
