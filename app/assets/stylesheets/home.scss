@@ -355,17 +355,17 @@ html {
     z-index: 1;
 }
 
-/* SOME DEMO STYLES - NOT REQUIRED */
 body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color, 10);}p, blockquote {color:fadeout($text-color, 30);}a {color:fadeout($text-color, 20);text-decoration:underline;&:hover {color:$text-color;}}}
 
 .home_picture_header {
 	margin-top: 0px;
-	height: 260px;
-	background-color: lightblue;
+	height: 400px;
+	background-image: url('home_top_pic.png');
+	background-size: cover;
 }
 .home_info_block {
-	height: 300px;
-
+	height: 290px;
+	text-align: center;
 }
 .home_break_up_info {
 	height: 100px;
@@ -376,6 +376,34 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 	height: 250px;
 
 }
+.home_green_bit {
+	display: block;
+	margin: auto;
+	padding-top: 20px;
+}
+.info_block_top_text {
+	padding-top: 20px;
+}
+.info_block_bottom_text {
+	display: inline-block;
+	width: 500px;
+}
+.home_second_green_bit {
+	display: inline-block;
+}
+.info_block_bottom_div {
+	width: 300px;
+	height: 100px;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
 
 
 
