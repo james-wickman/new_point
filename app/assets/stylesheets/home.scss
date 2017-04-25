@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
@@ -25,9 +24,6 @@ $side-color-6: lighten($side-color-5, 5%);
 $side-color-7: lighten($side-color-6, 5%);
 $side-color-8: lighten($side-color-7, 5%);
 $side-color-9: lighten($side-color-8, 5%);
-
-
-
 $side-color-2: darken($side-color-3, 5%);
 // HAMBURGER COLOR
 $hamburger-color-closed: fadeout($text-color, 30);
@@ -103,6 +99,7 @@ html {
 #page-content-wrapper {
   padding-top: 70px;
   width: $full-width;
+  display:inline;
 }
 
 /*-------------------------------*/
@@ -220,7 +217,6 @@ html {
   height: 65px;
   line-height: 44px;
 }
-
 
 /*-------------------------------*/
 /*       Hamburger-Cross         */
@@ -359,7 +355,57 @@ html {
     z-index: 1;
 }
 
-
-/* SOME DEMO STYLES - NOT REQUIRED */
 body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color, 10);}p, blockquote {color:fadeout($text-color, 30);}a {color:fadeout($text-color, 20);text-decoration:underline;&:hover {color:$text-color;}}}
+
+.home_picture_header {
+	margin-top: 0px;
+	height: 400px;
+	background-image: url('home_top_pic.png');
+	background-size: cover;
+}
+.home_info_block {
+	height: 290px;
+	text-align: center;
+}
+.home_break_up_info {
+	height: 100px;
+	background-color: lightgreen;
+
+}
+.home_bottom_info {
+	height: 250px;
+
+}
+.home_green_bit {
+	display: block;
+	margin: auto;
+	padding-top: 20px;
+}
+.info_block_top_text {
+	padding-top: 20px;
+}
+.info_block_bottom_text {
+	display: inline-block;
+	width: 500px;
+}
+.home_second_green_bit {
+	display: inline-block;
+}
+.info_block_bottom_div {
+	width: 300px;
+	height: 100px;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
