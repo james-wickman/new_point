@@ -359,7 +359,30 @@ html {
     z-index: 1;
 }
 
-
 /* SOME DEMO STYLES - NOT REQUIRED */
 body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color, 10);}p, blockquote {color:fadeout($text-color, 30);}a {color:fadeout($text-color, 20);text-decoration:underline;&:hover {color:$text-color;}}}
+
+
+
+.home_picture_header {
+	margin-top: -70px;
+	height: 260px;
+}
+.home_info_block {
+	height: 300px;
+
+}
+.home_break_up_info {
+	height: 100px;
+	background-color: lightgreen;
+
+}
+.home_bottom_info {
+	height: 250px;
+
+}
+
+
+
+
 
