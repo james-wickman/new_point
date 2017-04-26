@@ -3,5 +3,32 @@
 	this is the map
 </div>
 
+<div class='maps_container' style='width: 1150px; margin: auto;'>
+	<div id='multi_markers' style='width: 1150px; height: 600px;'>
+	</div>
+</div>
 
+
+<script>
+var handler = Gmaps.build('Google');
+handler.buildMap({provider: { scrollwheel: true }, internal: {id: 'multi_markers'}}, function(){
+	markers = handler.addMarkers([
+		<% @distributers_list.each_with_index do |dist, i| %>
+		    {
+		      "lat": <%=@distributers_locations[i][0]%>,
+		      "lng": <%=@distributers_locations[i][1]%>,
+		      "infowindow": `
+
+			      <%= dist[0] %><hr>
+			      Address: <%= dist[1] %><hr>
+			      Phone Number: <%= dist[2] %><hr>
+			      <a href="<%=dist[3]%>">Website</a>
+		      `
+		    },
+		<% end %>
+	]);
+handler.bounds.extendWith(markers);
+handler.fitMapToBounds();
+});
+</script>
 
