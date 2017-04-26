@@ -27,10 +27,10 @@
 
 }
 .ball_chain_img {
-
+	width: 100%;
 }
 .assistance_tube_img {
-
+	width: 100%;
 }
 .assistance_tube_text {
 
@@ -39,10 +39,10 @@
 
 }
 .expandable_hook_img {
-
+	width: 100%;
 }
 .noodle_img {
-
+	width: 100%;
 }
 .noodle_text {
 
@@ -52,8 +52,16 @@
 	border: 1px solid black;
 	margin: auto;
 }
-
-
+.shading {
+	box-shadow: 10px 10px 5px #888888;
+	border: 1px solid #888888;
+}
+.basic_border {
+	border: 1px solid black;
+}
+.double_space {
+	line-height: 1.7em;
+}
 
 
 
