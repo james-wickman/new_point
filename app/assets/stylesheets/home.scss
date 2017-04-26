@@ -11,10 +11,8 @@
 
 // BACKGROUND COLOR
 $bg-color: #583e7e;
-
 // TEXT COLOR
 $text-color: black;
-
 // SIDEBAR LINK COLOR VARIABLES
 $side-color-1: #1a1a1a;
 $side-color-4: $bg-color;
@@ -28,12 +26,10 @@ $side-color-2: darken($side-color-3, 5%);
 // HAMBURGER COLOR
 $hamburger-color-closed: fadeout($text-color, 30);
 $hamburger-color-open: $text-color;
-
 // WIDTH VARIABLES
 $width1: 220px;
 $width2: 100px;
 $full-width: 100%;
-
 // HEIGHT VARIABLES
 $full-height: 100%;
 
@@ -46,7 +42,6 @@ html {
   height: $full-height;
   background-color: #fff;
 }
-
 .nav {
   .open>a {
     background-color: transparent;
@@ -217,7 +212,6 @@ html {
   height: 65px;
   line-height: 44px;
 }
-
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
@@ -337,7 +331,6 @@ html {
     }
   }
 }
-
 /*-------------------------------*/
 /*          Dark Overlay         */
 /*-------------------------------*/
@@ -354,7 +347,6 @@ html {
     background-color: rgba(0,0,0,.4);
     z-index: 1;
 }
-
 body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color, 10);}p, blockquote {color:fadeout($text-color, 30);}a {color:fadeout($text-color, 20);text-decoration:underline;&:hover {color:$text-color;}}}
 
 .home_picture_header {
@@ -369,7 +361,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 }
 .home_break_up_info {
 	height: 100px;
-	background-color: lightgreen;
+	background-color: #5da17e;
 
 }
 .home_bottom_info {
@@ -379,7 +371,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 .home_green_bit {
 	display: block;
 	margin: auto;
-	padding-top: 20px;
+	padding: 20px 0 20px 0;
 }
 .info_block_top_text {
 	padding-top: 20px;
@@ -396,8 +388,9 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 	height: 100px;
 	display: inline-block;
 }
-
-
+.grey {
+  background-color: lightgrey;
+}
 
 
 
