@@ -1,9 +1,9 @@
 
 
 <div class="container" style='width: 100%; height: 100%;'>
-	<div class="row expirament" >
-		<div class="col-md-12 col-sm-12 grey">
-			maps
+	<div class="row" >
+		<div class="col-md-12 col-sm-12 grey" style="height: 50px;">
+			<input class="city_input" type="text" style="margin-left: 4%;"><button class="submit_button">Submit</button>
 		</div>
 	</div>
 	<div class="row" style='width: 100%; height: 90%; min-height: 250px; padding-left: 3%; margin: 0px;'>
@@ -17,6 +17,11 @@
 </div>
 
 <script>
+
+var submit_button = $(".submit_button");
+submit_button.on('click', function() {
+	console.log($('.city_input').val());
+})
 var handler = Gmaps.build('Google');
 handler.buildMap({provider: { scrollwheel: true }, internal: {id: 'multi_markers'}}, function(){
 	markers = handler.addMarkers([
@@ -34,8 +39,12 @@ handler.buildMap({provider: { scrollwheel: true }, internal: {id: 'multi_markers
 		    },
 		<% end %>
 	]);
-handler.bounds.extendWith(markers);
-handler.fitMapToBounds();
+	handler.bounds.extendWith(markers);
+	handler.fitMapToBounds();
+	console.log(<%=@user_location%>)
+	if (<%=@user_location[0]%> != 0 || <%=@user_location[1]%> != 0) {
+		handler.map.centerOn(<%=@user_location%>);
+	}
 });
 </script>
 
