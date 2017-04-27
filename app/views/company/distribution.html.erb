@@ -34,8 +34,12 @@ handler.buildMap({provider: { scrollwheel: true }, internal: {id: 'multi_markers
 		    },
 		<% end %>
 	]);
-handler.bounds.extendWith(markers);
-handler.fitMapToBounds();
+	handler.bounds.extendWith(markers);
+	handler.fitMapToBounds();
+	console.log(<%=@user_location%>)
+	if (<%=@user_location[0]%> != 0 && <%=@user_location[1]%> != 0) {
+		handler.map.centerOn(<%=@user_location%>);
+	}
 });
 </script>
 
