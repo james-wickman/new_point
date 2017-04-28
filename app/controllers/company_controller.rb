@@ -14,7 +14,7 @@ class CompanyController < ApplicationController
     
   	@distributers_locations = []
   	@distributers_list.each do |dist|
-  		coordinates = Geocoder.coordinates(dist[1]);
+  		coordinates = Geocoder.coordinates(dist[1])
   		@distributers_locations.push(coordinates)
   	end
   end
