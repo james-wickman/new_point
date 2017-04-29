@@ -3,7 +3,7 @@
 <div class="container" style='width: 100%; height: 100%;'>
 	<div class="row" >
 		<div class="col-md-12 col-sm-12 grey" style="height: 50px;">
-			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; width: 280px;"><button class="submit_button">Submit</button>
+			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; width: 260px;"><button class="submit_button">Submit</button>
 		</div>
 	</div>
 	<div class="row" style='width: 100%; height: 90%; min-height: 250px; padding-left: 3%; margin: 0px;'>
@@ -22,7 +22,7 @@
 		var input = $('.city_input').val();
 		// api call to google maps api too get lat and long from input box. then as long as the lat and long aren't 0 center the map onto that.
 		$.getJSON({
-			url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + input + '&key=AIzaSyC58rlqs0OTTUXAQ4ymK7xp0XeOIDSvjrM',
+			url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + input + '&key=<%=@google_api_key%>',
 			success: function(results) {
 				var location = [results.results[0].geometry.location.lat, results.results[0].geometry.location.lng];
 				if (location[0] != 0 || location[1] != 0) {

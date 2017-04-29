@@ -7,6 +7,7 @@ class CompanyController < ApplicationController
 
   def distribution
   	p request.location
+    @google_api_key = AIzaSyC58rlqs0OTTUXAQ4ymK7xp0XeOIDSvjrM
   	@user_location = [request.location.latitude, request.location.longitude]
 
   	#distributers list should be formated [distributer name, distributer address, distributer phone, url]
