@@ -6,12 +6,12 @@
 			<h5>Any questions please reach out</h5>
 		</div>
 	</div>
-	<div class="row shading">
+	<div class="row shading email_info_container">
 		<div class="col-md-6 col-sm-12">
 			<h5 >Contact Us</h5>
-			<p >info@newpointetools.com</p>
-			<p >sales@newpointetools.com</p>
-			<p >support@newpointetools.com</p>
+			<button class="info_button">info@newpointetools.com</button><br>
+			<button class="sales_button">sales@newpointetools.com</button><br>
+			<button class="support_button">support@newpointetools.com</button><br>
 			<p >PO Box  I will get a PO Box so I do not use my home address. </p>
 		</div>
 		<div class="col-md-6 col-sm-12">
@@ -19,5 +19,45 @@
 			<p >Testimonials</p>
 		</div>
 	</div>
+	<div class="row shading hidden email_container" style="margin-top: 10px;">
+		<div style="margin-top: 10px;" >
+			<div class="send_to_email small_margin"></div><br>
+			<input size="40" class="customer_email small_margin" type="text" name="" placeholder="Your Email"><br>
+			<input size="40" class="customer_name small_margin" type="text" name="" placeholder="Name"><br>
+			<textarea class="customer_input" placeholder="Please enter any questions you might have" name="" cols="60" rows="10"></textarea><hr>
+			<button class="submit_email">Submit</button>
+		</div>
+	</div>
 </div>
 
+<script>
+	$(".info_button").on('click', function() {
+		console.log("info");
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").text("info@newpointetools.com");
+	});
+	$(".sales_button").on('click', function() {
+		console.log('sales');
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").text("sales@newpointetools.com");
+	});
+	$(".support_button").on("click", function(){
+		console.log('support');
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").text("support@newpointetools.com");
+	});
+	$(".submit_email").on("click", function() {
+		var name = $('.customer_name').val();
+		var email = $('.customer_email').val();
+		var input = $('.customer_input').val();
+		console.log(name);
+		console.log(email);
+		console.log(input);
+	})
+</script>
