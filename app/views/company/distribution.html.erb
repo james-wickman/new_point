@@ -2,8 +2,8 @@
 
 <div class="container" style='width: 100%; height: 100%;'>
 	<div class="row" >
-		<div class="col-md-12 col-sm-12 grey" style="height: 50px;">
-			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; width: 260px;"><button class="submit_button">Submit</button>
+		<div class="col-md-12 col-sm-12 green" style="height: 70px;">
+			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; margin-top: 18px; width: 260px;"><button class="submit_button">Submit</button>
 		</div>
 	</div>
 	<div class="row" style='width: 100%; height: 90%; min-height: 250px; padding-left: 3%; margin: 0px;'>
@@ -27,10 +27,10 @@
 				var location = [results.results[0].geometry.location.lat, results.results[0].geometry.location.lng];
 				if (location[0] != 0 || location[1] != 0) {
 					handler.map.centerOn(location);
+					handler.getMap().setZoom(11);
 				}
 			}
 		})
-		
 	})
 	//builds the map with the distributer locations built in the controller
 	var handler = Gmaps.build('Google');
