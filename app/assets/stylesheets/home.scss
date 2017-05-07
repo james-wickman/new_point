@@ -352,7 +352,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 .home_picture_header {
 	margin-top: 0px;
 	height: 400px;
-	background-image: url('home_top_pic.png');
+	background: image-url('home_top_pic.png');
 	background-size: cover;
 }
 .home_info_block {
