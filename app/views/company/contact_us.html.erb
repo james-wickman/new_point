@@ -19,13 +19,20 @@
 		</div>
 	</div>
 	<div class="row shading hidden email_container" style="margin-top: 10px;">
-		<div style="margin-top: 10px;" >
-			<div class="send_to_email small_margin"></div><br>
-			<input size="40" class="customer_email small_margin" type="text" name="" placeholder="Your Email"><br>
-			<input size="40" class="customer_name small_margin" type="text" name="" placeholder="Name"><br>
-			<textarea class="customer_input" placeholder="Please enter any questions you might have" name="" cols="60" rows="10"></textarea><hr>
-			<button class="submit_email">Submit</button>
-		</div>
+
+		<%= form_tag'/company/send_email', remote: true do |f| %>
+			<div class="col-md-11 col-sm-11">
+				<div class="what_depo"></div>
+			</div>
+			<div class="col-md-1 col-sm-1">
+				<span class="close_contact_user">X</span>
+			</div>
+			<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
+			<%= text_area_tag :your_email, nil, size: "100x1", class: "customer_email", placeholder: "Your Email" %><br>
+			<%= text_area_tag :your_name, nil, size: "100x1", class: "customer_name", placeholder: "Your Name" %><br>
+			<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "Enter Message" %><hr>
+			<%= submit_tag "Send", class: "submit_email" %>
+		<% end %>
 	</div>
 </div>
 
@@ -35,21 +42,24 @@
 		$(".email_container").removeClass('hidden');
 		$(".email_info_container").removeClass('shading');
 		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").text("info@newpointetools.com");
+		$(".send_to_email").val("info@newpointetools.com");
+		$(".what_depo").text("More Information");
 	});
 	$(".sales_button").on('click', function() {
 		console.log('sales');
 		$(".email_container").removeClass('hidden');
 		$(".email_info_container").removeClass('shading');
 		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").text("sales@newpointetools.com");
+		$(".send_to_email").val("sales@newpointetools.com");
+		$(".what_depo").text("Sales Information");
 	});
 	$(".support_button").on("click", function(){
 		console.log('support');
 		$(".email_container").removeClass('hidden');
 		$(".email_info_container").removeClass('shading');
 		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").text("support@newpointetools.com");
+		$(".send_to_email").val("support@newpointetools.com");
+		$(".what_depo").text("More Support");
 	});
 	$(".submit_email").on("click", function() {
 		var name = $('.customer_name').val();
@@ -59,4 +69,24 @@
 		console.log(email);
 		console.log(input);
 	})
+	$(".close_contact_user").on("click", function() {
+		console.log('close0');
+		$(".email_container").addClass('hidden');
+		$(".customer_email").val('');
+		$(".customer_name").val('');
+		$(".customer_input").val('');
+	})
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+

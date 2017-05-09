@@ -21,5 +21,31 @@ class CompanyController < ApplicationController
   end
 
   def contact_us
+
   end
+
+  def send_email
+    respond_to do |format|
+      p params
+      send_to_email = params[:send_to_email]
+      customer_email = params[:your_email]
+      subject = params[:your_name] + " " + params[:your_email]
+      message = params[:message] + "!"
+      
+
+      RestClient.post "https://api:key-30d821d6c11596a992688a6634ae275e"\
+      "@api.mailgun.net/v3/sandbox9fb152fc72764c398de75a97eab6ac0f.mailgun.org/messages",
+      :from => "Mailgun Sandbox <postmaster@sandbox9fb152fc72764c398de75a97eab6ac0f.mailgun.org>",  #  need to change too a autherized domain
+      :to => "nauticalnova@hotmail.com", # change too send_to_email when done with testing and after you have set up autherized domain.  will ned to authorize recipients, ie send to emails.
+      :subject => "#{subject}",
+      :text => "#{message}"
+      p status
+      if status == 200
+        format.js
+      else
+        
+      end
+    end
+  end
+
 end

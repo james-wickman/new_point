@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  get 'company/about_us'
 
-  get 'company/product'
+	post 'company/send_email'
+	
+	get 'company/about_us'
 
-  get 'company/distribution'
+	get 'company/product'
 
-  get 'company/contact_us'
+	get 'company/distribution'
 
-  root to: "home#index"
+	get 'company/contact_us'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	root to: "home#index"
+
+	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
