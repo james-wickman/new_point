@@ -30,7 +30,7 @@
 			<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
 			<%= text_area_tag :your_email, nil, size: "100x1", class: "customer_email", placeholder: "Your Email" %><br>
 			<%= text_area_tag :your_name, nil, size: "100x1", class: "customer_name", placeholder: "Your Name" %><br>
-			<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "Enter Message" %><hr>
+			<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "This will only send too me right now" %><hr>
 			<%= submit_tag "Send", class: "submit_email" %>
 		<% end %>
 	</div>
