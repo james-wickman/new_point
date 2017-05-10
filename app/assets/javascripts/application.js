@@ -18,6 +18,11 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function () {
+  $(".products_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#products").offset().top},
+          'slow');
+  });
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
      isClosed = false;
