@@ -24,23 +24,19 @@
         <!-- Sidebar -->
         <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
-                <div style="height:80px">
-                </div>
+                <%= link_to raw("<div class='company_name' style='height:80px'></div>"), {controller: "home", action: "index"} %>
+                
                 <li>
-                	<%= link_to raw("<i class='fa fa-fw fa-home'></i> Home "), {controller: "home", action: "index"} %>
+                    <a class="scroll_button products_button"><i class='fa fa-fw fa-folder'></i>Products</a>
                 </li>
                 <li>
-                	<%= link_to raw("<i class='fa fa-fw fa-folder'></i> Products "), {controller: "company", action: "product"} %>
-                    <a class="products_button"><i class='fa fa-fw fa-folder'></i>one page</a>
+                    <a class="scroll_button distribution_button"><i class='fa fa-fw fa-file-o'></i>Distribution</a>
                 </li>
                 <li>
-                	<%= link_to raw("<i class='fa fa-fw fa-file-o'></i> Distribution "), {controller: "company", action: "distribution"} %>
+                    <a class="scroll_button about_us_button"><i class='fa fa-fw fa-plus'></i>About Us</a>
                 </li>
                 <li>
-                	<%= link_to raw("<i class='fa fa-fw fa-plus'></i> About Us "), {controller: "company", action: "about_us"} %>
-                </li>
-                <li>
-                	<%= link_to raw("<i class='fa fa-fw fa-cog'></i> Contact Us "), {controller: "company", action: "contact_us"} %>
+                    <a class="scroll_button contact_us_button"><i class='fa fa-fw fa-cog'></i>Contact Us</a>
                 </li>
             </ul>
         </nav>

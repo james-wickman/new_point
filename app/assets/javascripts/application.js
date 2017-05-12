@@ -23,16 +23,47 @@ $(document).on('turbolinks:load', function () {
           scrollTop: $("#products").offset().top},
           'slow');
   });
+  $(".distribution_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#distribution").offset().top},
+          'slow');
+  });
+  $(".about_us_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#about_us").offset().top},
+          'slow');
+  });
+  $(".contact_us_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#contact_us").offset().top},
+          'slow');
+  });
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
      isClosed = false;
 
-    trigger.click(function () {
-      hamburger_cross();      
-    });
-
+  $("body").click(function(e) {
+    if($('.hamburger').hasClass('is-open')){
+      if ($(e.target).hasClass('nav')) {
+        console.log('false');
+          return false;
+      }
+      else if ($(e.target).hasClass('hamburger')) {
+        console.log('false');
+          return false;
+      }
+      else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
+        console.log('run')
+        return false;
+      }
+      else{
+        run();
+        hamburger_cross();
+      }
+    }
+    
+  })
     function hamburger_cross() {
-
       if (isClosed == true) {          
         overlay.hide();
         trigger.removeClass('is-open');
@@ -45,8 +76,14 @@ $(document).on('turbolinks:load', function () {
         isClosed = true;
       }
   }
-  
+  function run() {
+    $('#wrapper').toggleClass('toggled');
+    console.log('open');
+  }
   $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
+    if($('.hamburger').hasClass('is-closed')){
+      $('#wrapper').toggleClass('toggled');
+      hamburger_cross();
+    }
   });  
 });
