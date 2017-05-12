@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function () {
      isClosed = false;
 
   $("body").click(function(e) {
-    if($('.hamburger').hasClass('is-open')){
+    if(isClosed == true){
       if ($(e.target).hasClass('nav')) {
         console.log('false');
           return false;
@@ -62,9 +62,22 @@ $(document).on('turbolinks:load', function () {
     }
     
   })
+    function hamburger_cross() {
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
   function run(e) {
-    e.preventDefault();
     $("#wrapper").toggleClass("active");
+    hamburger_cross();
   }
   $('[data-toggle="offcanvas"]').click(function(e) {
       run(e);

@@ -413,7 +413,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
     margin-left: -150px;
     left: 70px;
     width: 150px;
-    background: #222;
+    background: image-url('design.png');
     position: fixed;
     height: 100%;
     z-index: 10000;
@@ -451,7 +451,6 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
     float: left;
     text-decoration: none;
     width: 150px;
-    background: #252525;
     border-top: 1px solid #373737;
     border-bottom: 1px solid #1A1A1A;
     -webkit-transition: background .5s;
@@ -531,18 +530,18 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
     #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
-}
-#sidebar-wrapper {
-    left: 70px;
-}
-#wrapper.active {
-    padding-left: 150px;
-}
-#wrapper.active #sidebar-wrapper {
-    left: 150px;
-    width: 150px;
-    transition: all .4s ease 0s;
-}
+  }
+  #sidebar-wrapper {
+      left: 70px;
+  }
+  #wrapper.active {
+      padding-left: 150px;
+  }
+  #wrapper.active #sidebar-wrapper {
+      left: 150px;
+      width: 150px;
+      transition: all .4s ease 0s;
+  }
 }
 
 
