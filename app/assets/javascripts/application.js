@@ -58,32 +58,17 @@ $(document).on('turbolinks:load', function () {
       }
       else{
         run();
-        hamburger_cross();
       }
     }
     
   })
-    function hamburger_cross() {
-      if (isClosed == true) {          
-        overlay.hide();
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-      } else {   
-        overlay.show();
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
+  function run(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("active");
   }
-  function run() {
-    $('#wrapper').toggleClass('toggled');
-    console.log('open');
-  }
-  $('[data-toggle="offcanvas"]').click(function () {
-    if($('.hamburger').hasClass('is-closed')){
-      $('#wrapper').toggleClass('toggled');
-      hamburger_cross();
-    }
-  });  
+  $('[data-toggle="offcanvas"]').click(function(e) {
+      run(e);
+  });
+
+
 });
