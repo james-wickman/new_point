@@ -27,6 +27,9 @@
                 <%= link_to raw("<div class='company_name' style='height:80px'></div>"), {controller: "home", action: "index"} %>
                 <% if current_page?(root_path) %>
                     <li>
+                        <a class="scroll_button home_button"><i class='sub_icon fa fa-fw fa-home'></i>Home</a>
+                    </li>
+                    <li>
                         <a class="scroll_button products_button"><i class='sub_icon fa fa-fw fa-folder'></i>Products</a>
                     </li>
                     <li>

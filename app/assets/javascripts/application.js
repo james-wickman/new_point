@@ -18,6 +18,11 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function () {
+  $(".home_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#home").offset().top},
+          'slow');
+  });
   $(".products_button").on('click', function() {
       $('html,body').animate({
           scrollTop: $("#products").offset().top},
