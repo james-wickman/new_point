@@ -91,11 +91,6 @@ html {
     display: none;
   }
 }
-#page-content-wrapper {
-  padding-top: 70px;
-  width: $full-width;
-  display:inline;
-}
 
 /*-------------------------------*/
 /*     Sidebar nav styles        */
@@ -221,7 +216,7 @@ html {
   border: none;
   display: block;
   height: 32px;
-  margin-left: 105px;
+  margin-left: 125px;
   position: fixed;
   top: 20px;
   width: 32px;
@@ -404,7 +399,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 }
 
 #wrapper {
-    padding-left: 70px;
+    padding-left: 0px;
     transition: all .4s ease 0s;
     height: 100%
 }
@@ -517,11 +512,11 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 
 @media (max-width:767px) {
     #wrapper {
-    padding-left: 70px;
+    padding-left: 0px;
     transition: all .4s ease 0s;
   }
   #sidebar-wrapper {
-      left: 70px;
+      left: 50px;
   }
   #wrapper.active {
       padding-left: 150px;
