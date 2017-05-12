@@ -2,19 +2,27 @@
 <div class="container" style='width: 100%; height: 100%;'>
 	<div class="row" >
 		<div class="col-md-12 col-sm-12 green" style="height: 70px;">
-			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; margin-top: 18px; width: 260px;"><button class="submit_button">Submit</button>
 		</div>
 	</div>
-	<div class="row" style='width: 100%; height: 90%; min-height: 250px; padding-left: 3%; margin: 0px;'>
-		<div class="col-md-12 col-sm-12" style='width: 100%; height: 100%;'>
-			<div class='maps_container' style='width: 100%; margin: auto; height: 100%;'>
-				<div id='multi_markers' style='width: 100%; height: 100%;'>
-				</div>
-			</div>
-		</div>
+	<div class="row" style='width: 100%; height: 400px; min-height: 250px; padding-left: 5%; margin: 0px; padding-top: 10px;'>
+		<div id="sidebar_builder" style='width: 700px; height: 400px; display: inline-block;'></div>
+	  <div id='sidebar_container' style='width: 300px; height: 400px; display: inline-block; float: right;'>
+	  	<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; margin-top: 18px; width: 260px;"><button class="submit_button">Submit</button>
+	  </div>
+	</div>
+	<div class="row" style='width: 100%; min-height: 250px; padding-left: 5%; padding-top: 20px;'>
+		<button class="distributer_button">Become a Distributer?</button>
+
+			<%= form_tag'/company/send_email', remote: true, class: "hidden distributer_form" do |f| %>
+				
+				<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
+				<%= text_area_tag :your_email, nil, size: "100x1", class: "customer_email", placeholder: "Your Email" %><br>
+				<%= text_area_tag :your_name, nil, size: "100x1", class: "customer_name", placeholder: "Your Name" %><br>
+				<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "This will only send too me right now" %><hr>
+				<%= submit_tag "Send", class: "submit_email" %>
+			<% end %>
 	</div>
 </div>
-
 <script>
 	var submit_button = $(".submit_button");
 	submit_button.on('click', function() {
@@ -32,15 +40,37 @@
 		})
 	})
 	//builds the map with the distributer locations built in the controller
-	var handler = Gmaps.build('Google');
-	handler.buildMap({provider: { scrollwheel: true }, internal: {id: 'multi_markers'}}, function(){
-		markers = handler.addMarkers([
-			<% @distributers_list.each_with_index do |dist, i| %>
+	
+	function createSidebarLi(json){
+	  return ("<ul style='cursor:pointer;'><a>" + json.name + "</a></ul>");
+	};
+
+	function bindulToMarker($ul, marker){
+	  $ul.on('click', function(){
+	    handler.getMap().setZoom(11);
+	    marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+	    marker.panTo();
+	    google.maps.event.trigger(marker.getServiceObject(), 'click');
+	  })
+	};
+
+	function createSidebar(json_array){
+	  _.each(json_array, function(json){
+	    var $ul = $( createSidebarLi(json) );
+	    $ul.appendTo('#sidebar_container');
+	    bindulToMarker($ul, json.marker);
+	  });
+	};
+
+	handler = Gmaps.build('Google');
+	handler.buildMap({ internal: {id: 'sidebar_builder'}}, function(){
+	  var json_array = [
+	    <% @distributers_list.each_with_index do |dist, i| %>
 			    {
 			      "lat": <%=@distributers_locations[i][0]%>,
 			      "lng": <%=@distributers_locations[i][1]%>,
+			      "name": '<%= dist[0] %>',
 			      "infowindow": `
-
 				      <%= dist[0] %><hr>
 				      Address: <%= dist[1] %><hr>
 				      Phone Number: <%= dist[2] %><hr>
@@ -48,14 +78,23 @@
 			      `
 			    },
 			<% end %>
-		]);
-		handler.bounds.extendWith(markers);
-		handler.fitMapToBounds();
-		console.log(<%=@user_location%>)
-		// centers the map too the lat and long from ip address as long as there not 0
-		if (<%=@user_location[0]%> != 0 || <%=@user_location[1]%> != 0) {
+	  ];
+
+	  var markers = handler.addMarkers(json_array);
+	  if (<%=@user_location[0]%> != 0 || <%=@user_location[1]%> != 0) {
 			handler.map.centerOn(<%=@user_location%>);
 		}
+	  _.each(json_array, function(json, index){
+	    json.marker = markers[index];
+	  });
+
+	  createSidebar(json_array);
+	  handler.bounds.extendWith(markers);
+	  handler.fitMapToBounds();
 	});
+
+	$('.distributer_button').on('click', function() {
+		$('.distributer_form').removeClass('hidden');
+	})
 </script>
 
