@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function () {
      isClosed = false;
 
   $("body").click(function(e) {
-    if($('.hamburger').hasClass('is-open')){
+    if(isClosed == true){
       if ($(e.target).hasClass('nav')) {
         console.log('false');
           return false;
@@ -58,7 +58,6 @@ $(document).on('turbolinks:load', function () {
       }
       else{
         run();
-        hamburger_cross();
       }
     }
     
@@ -76,14 +75,13 @@ $(document).on('turbolinks:load', function () {
         isClosed = true;
       }
   }
-  function run() {
-    $('#wrapper').toggleClass('toggled');
-    console.log('open');
+  function run(e) {
+    $("#wrapper").toggleClass("active");
+    hamburger_cross();
   }
-  $('[data-toggle="offcanvas"]').click(function () {
-    if($('.hamburger').hasClass('is-closed')){
-      $('#wrapper').toggleClass('toggled');
-      hamburger_cross();
-    }
-  });  
+  $('[data-toggle="offcanvas"]').click(function(e) {
+      run(e);
+  });
+
+
 });
