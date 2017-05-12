@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
+@import "https://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 /*-------------------------------*/
@@ -395,7 +395,9 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
   color: white; 
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
+.scroll_button {
+  cursor: pointer; 
+}
 
 
 
