@@ -10,15 +10,15 @@
 		<div class="col-md-6 col-sm-0" style="padding:0px;">
 			<div id="sidebar_builder" style='width: 100%; height: 400px;'></div>
 		</div>
-		<div class="col-md-4 col-sm-0" style="padding:0px;">
-			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; margin-top: 18px; margin-bottom:10px; width: 260px;"><button class="submit_button">
+		<div class="col-md-4 col-sm-0" style="padding:0px; border: 1px solid black;">
+			<input placeholder="Search by city, state or zip" class="city_input" type="text" style="margin-left: 4%; margin-top: 18px; margin-bottom:10px; width: 230px;"><button class="submit_button">
 		  	
 		  	Submit</button>
-		  	<div id='sidebar_container' style='width: 100%; height: 340px; overflow: auto;'>
+		  	<div id='sidebar_container' style='width: 100%; height: 335px; overflow: auto;'>
 		  </div>
 		</div>
 	</div>
-	<div class="row" style='width: 100%; min-height: 250px; padding-left: 5%; padding-top: 20px;'>
+	<div class="row" style='width: 100%; min-height: 50px; padding-left: 5%; padding-top: 20px;'>
 		<button class="distributer_button">Become a Distributer?</button>
 
 			<%= form_tag'/company/send_email', remote: true, class: "hidden distributer_form" do |f| %>
@@ -74,18 +74,18 @@
 	handler.buildMap({ internal: {id: 'sidebar_builder'}}, function(){
 	  var json_array = [
 	    <% @distributers_list.each_with_index do |dist, i| %>
-			    {
-			      "lat": <%=@distributers_locations[i][0]%>,
-			      "lng": <%=@distributers_locations[i][1]%>,
-			      "name": '<%= dist[0] %>',
-			      "infowindow": `
-				      <%= dist[0] %><hr>
-				      Address: <%= dist[1] %><hr>
-				      Phone Number: <%= dist[2] %><hr>
-				      <a href="<%=dist[3]%>">Website</a>
-			      `
-			    },
-			<% end %>
+		    {
+		      "lat": <%=@distributers_locations[i][0]%>,
+		      "lng": <%=@distributers_locations[i][1]%>,
+		      "name": '<%= dist[0] %>',
+		      "infowindow": `
+			      <%= dist[0] %><hr>
+			      Address: <%= dist[1] %><hr>
+			      Phone Number: <%= dist[2] %><hr>
+			      <a href="<%=dist[3]%>">Website</a>
+		      `
+		    },
+		<% end %>
 	  ];
 
 	  var markers = handler.addMarkers(json_array);
@@ -104,5 +104,10 @@
 	$('.distributer_button').on('click', function() {
 		$('.distributer_form').removeClass('hidden');
 	})
+	Gmaps.map.callback = function() {
+      _.each(Gmaps.map.markers, function(marker) {
+        Gmaps.map.hideMarker(marker)
+      })
+    }
 </script>
 
