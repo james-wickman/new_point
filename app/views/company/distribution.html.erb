@@ -54,7 +54,7 @@
 	//builds the map with the distributer locations built in the controller
 	
 	function createSidebarLi(json){
-	  return ("<ul class='center' style='cursor:pointer; background: white; width: 75%; margin: 0 auto; padding: 0px; margin-top: 5px'><a>" + json.name + "</a></ul>");
+	  return ("<ul style='cursor:pointer; background: white; width: 75%; margin: 0 auto; padding: 0px; margin-top: 5px'><a>" + json.name + "</a></ul>");
 	};
 
 	function bindulToMarker($ul, marker){
@@ -81,7 +81,7 @@
 		    {
 		      "lat": <%=@distributers_locations[i][0]%>,
 		      "lng": <%=@distributers_locations[i][1]%>,
-		      "name": '<%= dist[0] %>',
+		      "name": '<%= dist[0] %>' + '<br>' + '<%= dist[1] %>',
 		      "infowindow": `
 			      <%= dist[0] %><hr>
 			      Address: <%= dist[1] %><hr>
@@ -108,10 +108,10 @@
 	$('.distributer_button').on('click', function() {
 		$('.distributer_form').removeClass('hidden');
 	})
-	Gmaps.map.callback = function() {
-      _.each(Gmaps.map.markers, function(marker) {
-        Gmaps.map.hideMarker(marker)
-      })
-    }
+	// Gmaps.map.callback = function() {
+ //      _.each(Gmaps.map.markers, function(marker) {
+ //        Gmaps.map.hideMarker(marker)
+ //      })
+ //    }
 </script>
 
