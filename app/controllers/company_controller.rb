@@ -25,7 +25,6 @@ class CompanyController < ApplicationController
                           ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
                           ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
                           ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com']]
-    
   	@distributers_locations = []
   	@distributers_list.each do |dist|
   		coordinates = Geocoder.coordinates(dist[1])
