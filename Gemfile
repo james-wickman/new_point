@@ -15,6 +15,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'rest-client'
 gem 'mailgun-ruby'
+gem 'geokit-rails'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
