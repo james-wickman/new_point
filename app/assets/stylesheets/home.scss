@@ -9,6 +9,10 @@
 /*           VARIABLES           */
 /*-------------------------------*/
 
+
+// need to get ride of unused styles and change inline styles to be placed here
+
+
 // BACKGROUND COLOR
 $bg-color: #583e7e;
 // TEXT COLOR
@@ -495,7 +499,7 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 .sub_icon
 {
     float:right;
-   padding-right: 65px;
+   padding-right: 25px;
    padding-top:10px;
 }
 .content-header {
