@@ -44,21 +44,40 @@ $(document).on('turbolinks:load', function () {
           'slow');
   });
   var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
+    overlay = $('.overlay'),
+    isClosed = true;
+    run();
+  trigger.removeClass('is-closed');
+  trigger.addClass('is-open');
 
+  document.addEventListener('scroll', function (e) {
+    if (window.location.hash == '' && $(window).scrollTop() > 50) {
+      if (isClosed == false) {
+        run();
+      }
+    }
+    else if (window.location.hash == '' && $(window).scrollTop() < 50) {
+      if (isClosed == true) {
+        run();
+      }
+    }
+    else {
+      console.log(e)
+    }
+
+  })
   
     function hamburger_cross() {
-      if (isClosed == true) {          
+      if (isClosed == false) {          
         overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
-        isClosed = false;
+        isClosed = true;
       } else {   
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
-        isClosed = true;
+        isClosed = false;
       }
   }
   function run(e) {

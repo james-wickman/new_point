@@ -83,7 +83,7 @@
 			</div>
 		</div>
 		<div class="row center grey">
-			<%= link_to raw(" More info on Products "), {controller: "company", action: "product"} %>
+			<%= button_to " More info on Products ", company_product_path, class: 'products_link' %>
 		</div>
 	</section>
 	<section id="distribution">
@@ -105,7 +105,7 @@
 			</div>
 		</div>
 		<div class="row center" style="margin-left: 40px;">
-			<%= link_to raw("Distribution "), {controller: "company", action: "distribution"} %>
+			<%= button_to "More about Distribution ", company_distribution_path, class: 'products_link'  %>
 		</div>
 		
                 	
@@ -125,7 +125,7 @@
 			</div>
 		</div>
 		<div class="row center grey">
-               <%= link_to raw("<i class='fa fa-fw fa-plus'></i> About Us "), {controller: "company", action: "about_us"} %>
+               <%= button_to "More About Us ", company_about_us_path, class: 'products_link' %>
 		</div>
 	</section>
 	<section id="contact_us">
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 		<div class="row home_bottom_info center">
-            <%= link_to raw("<i class='fa fa-fw fa-cog'></i> Contact Us "), {controller: "company", action: "contact_us"} %>
+            <%= button_to "Contact Us ", company_contact_us_path, class: 'products_link' %>
 		</div>
 	</section>
 </div>
