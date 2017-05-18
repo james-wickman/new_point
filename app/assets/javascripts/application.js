@@ -44,45 +44,48 @@ $(document).on('turbolinks:load', function () {
           'slow');
   });
   var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
+    overlay = $('.overlay'),
+    isClosed = true;
 
-  $("body").click(function(e) {
-    if(isClosed == true){
-      if ($(e.target).hasClass('nav')) {
-        console.log('false');
-          return false;
-      }
-      else if ($(e.target).hasClass('hamburger')) {
-        console.log('false');
-          return false;
-      }
-      else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
-        run();
-      }
-      else{
+  if ($(window).scrollTop() < 50) {
+    run();isClosed = true;
+  trigger.removeClass('is-closed');
+  trigger.addClass('is-open');
+  isClosed = false;
+  }
+  document.addEventListener('scroll', function (e) {
+    if (window.location.hash == '' && $(window).scrollTop() > 50) {
+      if (isClosed == false) {
         run();
       }
     }
-    
+    else if (window.location.hash == '' && $(window).scrollTop() < 50) {
+      if (isClosed == true) {
+        run();
+      }
+    }
   })
+  
     function hamburger_cross() {
-      if (isClosed == true) {          
+      if (isClosed == false) {          
         overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
-        isClosed = false;
+        isClosed = true;
       } else {   
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
-        isClosed = true;
+        isClosed = false;
       }
   }
   function run(e) {
     $("#wrapper").toggleClass("active");
     hamburger_cross();
   }
+  $('[data-toggle="offcanvas"]').click(function(e) {
+      run(e);
+  });
 
 
 });

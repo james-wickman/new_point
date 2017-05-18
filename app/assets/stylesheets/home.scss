@@ -334,18 +334,6 @@ html {
 /*          Dark Overlay         */
 /*-------------------------------*/
 
-.overlay {
-    position: fixed;
-    display: none;
-    width: $full-width;
-    height: $full-height;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.4);
-    z-index: 1;
-}
 body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color, 10);}p, blockquote {color:fadeout($text-color, 30);}a {color:fadeout($text-color, 20);text-decoration:underline;&:hover {color:$text-color;}}}
 
 .home_picture_header {
@@ -540,6 +528,39 @@ body, html {background-color: #fff} body {h1,h2,h3,h4 {color:fadeout($text-color
 }
 .new_admin {
   margin-left: 150px;
+}
+.products_link {
+
+}
+.products_link {
+    color: $side-color-4;
+    background: #FFF;
+    padding: 12px 17px;
+    margin: 25px;
+    font-family: 'OpenSansBold', sans-serif;
+    border: 3px solid $side-color-4;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 $side-color-4;
+  -webkit-transition: all ease 1.4s;
+  -moz-transition: all ease 1.4s;
+  transition: all ease 0.8s;
+}
+.products_link:hover {
+    box-shadow: inset 265px 0 0 0 $side-color-4;
+    color: #FFF;
+}
+
+footer {
+  background-color: #5da17e;
+  color: white;
+}
+.white {
+  color: white;
 }
 
 
