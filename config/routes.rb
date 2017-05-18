@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
 	resources :distributers
 
+	# reroutes sign up new admin to home page so there can only be one.
+	get 'admins/sign_up', to: "home#index"
+
 	post 'company/send_email'
 
 	get 'company/about_us'

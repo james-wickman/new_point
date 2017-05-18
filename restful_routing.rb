@@ -7,6 +7,7 @@
                           PATCH  /distributers/:id(.:format)      distributers#update
                           PUT    /distributers/:id(.:format)      distributers#update
                           DELETE /distributers/:id(.:format)      distributers#destroy
+           admins_sign_up GET    /admins/sign_up(.:format)        home#index
        company_send_email POST   /company/send_email(.:format)    company#send_email
          company_about_us GET    /company/about_us(.:format)      company#about_us
           company_product GET    /company/product(.:format)       company#product
