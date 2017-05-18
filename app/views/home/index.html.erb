@@ -1,5 +1,7 @@
 <section id="home">
 <div class="home_picture_header">
+	<%= link_to "ADMIN", new_admin_session_path, class: 'admin_login' %> <br>
+	<%= link_to " log out ", destroy_admin_session_path, method: :delete, class: 'admin_login' %>
 </div>
 	</section>
 <div class="container-fluid">

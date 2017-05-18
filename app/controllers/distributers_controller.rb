@@ -1,5 +1,7 @@
 class DistributersController < ApplicationController
   def index
+    @distributers = Distributer.all
+    p @distributers
   end
 
   def new

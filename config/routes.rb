@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
 
-  get 'distributers/index'
+	get 'distributers/index'
 
-  get 'distributers/new'
+	get 'distributers/new'
 
-  get 'distributers/create'
+	get 'distributers/create'
 
-  get 'distributers/edit'
+	get 'distributers/edit'
 
-  get 'distributers/update'
+	get 'distributers/update'
 
-  get 'distributers/destroy'
+	get 'distributers/destroy'
 
 	post 'company/send_email'
-	
+
 	get 'company/about_us'
 
 	get 'company/product'
@@ -25,8 +25,8 @@ Rails.application.routes.draw do
 	root to: "home#index"
 
 	devise_for :admins, controllers: {
-        sessions: 'admins/sessions'
-      }
+	    sessions: 'admins/sessions'
+	  }
 
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
