@@ -58,8 +58,7 @@ $(document).on('turbolinks:load', function () {
           return false;
       }
       else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
-        console.log('run')
-        return false;
+        run();
       }
       else{
         run();
@@ -84,9 +83,6 @@ $(document).on('turbolinks:load', function () {
     $("#wrapper").toggleClass("active");
     hamburger_cross();
   }
-  $('[data-toggle="offcanvas"]').click(function(e) {
-      run(e);
-  });
 
 
 });
