@@ -6,17 +6,19 @@
 		</div>
 	</div>
 	<div class="row shading email_info_container">
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-1 col-sm-1">
+		</div>
+		<div class="col-md-5 col-sm-11">
 			<h5 >Contact Us</h5>
-			<button class="info_button">info@newpointetools.com</button><br>
+			<button class="info_button products_link">info@newpointetools.com</button><br>
 			<p >PO Box  I will get a PO Box so I do not use my home address. </p>
 		</div>
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-11">
 			<p >Feedback</p>
 			<p >Testimonials</p>
 		</div>
 	</div>
-	<div class="row shading hidden email_container" style="margin-top: 10px;">
+	<div class="row shading hidden email_container" style="margin-top: 10px; margin-left: 50px;">
 
 		<%= form_tag'/company/send_email', remote: true do |f| %>
 			<div class="col-md-11 col-sm-11">
