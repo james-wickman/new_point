@@ -46,10 +46,13 @@ $(document).on('turbolinks:load', function () {
   var trigger = $('.hamburger'),
     overlay = $('.overlay'),
     isClosed = true;
-    run();
+
+  if ($(window).scrollTop() < 50) {
+    run();isClosed = true;
   trigger.removeClass('is-closed');
   trigger.addClass('is-open');
-
+  isClosed = false;
+  }
   document.addEventListener('scroll', function (e) {
     if (window.location.hash == '' && $(window).scrollTop() > 50) {
       if (isClosed == false) {
@@ -61,10 +64,6 @@ $(document).on('turbolinks:load', function () {
         run();
       }
     }
-    else {
-      console.log(e)
-    }
-
   })
   
     function hamburger_cross() {
