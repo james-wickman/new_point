@@ -30,9 +30,10 @@ class CompanyController < ApplicationController
   def send_email
     respond_to do |format|
       p params
+      cust_name = params[:first_name] + ' ' + params[:last_name]
       send_to_email = params[:send_to_email]
       customer_email = params[:your_email]
-      subject = params[:your_name] + " " + params[:your_email]
+      subject = cust_name + " " + params[:your_email]
       message = params[:message] + "!"
       
 
