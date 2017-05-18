@@ -54,12 +54,12 @@ $(document).on('turbolinks:load', function () {
   isClosed = false;
   }
   document.addEventListener('scroll', function (e) {
-    if (window.location.hash == '' && $(window).scrollTop() > 50) {
+    if (window.location.hash == '' && $(window).scrollTop() > 10) {
       if (isClosed == false) {
         run();
       }
     }
-    else if (window.location.hash == '' && $(window).scrollTop() < 50) {
+    else if (window.location.hash == '' && $(window).scrollTop() < 10) {
       if (isClosed == true) {
         run();
       }
