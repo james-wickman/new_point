@@ -28,8 +28,10 @@
 				<div class="close_contact_user center">X</div>
 			</div>
 			<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
-			<%= text_area_tag :your_email, nil, size: "100x1", class: "customer_email", placeholder: "Your Email" %><br>
-			<%= text_area_tag :your_name, nil, size: "100x1", class: "customer_name", placeholder: "Your Name" %><br>
+			<%= text_area_tag :first_name, nil, size: "20x1", class: "customer_name", placeholder: "First Name" %>
+			<%= text_area_tag :last_name, nil, size: "20x1", class: "customer_name", placeholder: "Last Name" %><br>
+			<%= text_area_tag :your_email, nil, size: "45x1", class: "customer_email", placeholder: "Your Email" %><br>
+			
 			<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "This will only send too me right now" %><hr>
 			<%= submit_tag "Send", class: "submit_email" %>
 		<% end %>
