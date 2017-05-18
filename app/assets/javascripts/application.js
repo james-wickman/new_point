@@ -47,25 +47,7 @@ $(document).on('turbolinks:load', function () {
       overlay = $('.overlay'),
      isClosed = false;
 
-  $("body").click(function(e) {
-    if(isClosed == true){
-      if ($(e.target).hasClass('nav')) {
-        console.log('false');
-          return false;
-      }
-      else if ($(e.target).hasClass('hamburger')) {
-        console.log('false');
-          return false;
-      }
-      else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
-        run();
-      }
-      else{
-        run();
-      }
-    }
-    
-  })
+  
     function hamburger_cross() {
       if (isClosed == true) {          
         overlay.hide();
@@ -83,6 +65,9 @@ $(document).on('turbolinks:load', function () {
     $("#wrapper").toggleClass("active");
     hamburger_cross();
   }
+  $('[data-toggle="offcanvas"]').click(function(e) {
+      run(e);
+  });
 
 
 });
