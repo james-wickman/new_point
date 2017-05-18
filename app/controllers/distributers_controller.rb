@@ -21,7 +21,6 @@ class DistributersController < ApplicationController
     if current_admin 
       params = add_distibuters_params
       p params[:name]
-
       if Distributer.create(name: params[:name], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip], phone: params[:phone], url: params[:url], email: params[:email])
         redirect_to distributers_path
       end
