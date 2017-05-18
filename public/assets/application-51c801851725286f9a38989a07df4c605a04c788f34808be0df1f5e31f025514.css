@@ -1,0 +1,749 @@
+/* line 7, /repositories/new_point/app/assets/stylesheets/company.scss */
+.inline_block {
+  display: inline-block;
+  width: 49%;
+}
+
+/* line 11, /repositories/new_point/app/assets/stylesheets/company.scss */
+.center {
+  text-align: center;
+}
+
+/* line 17, /repositories/new_point/app/assets/stylesheets/company.scss */
+.assistance_tube_div {
+  background-color: lightgrey;
+}
+
+/* line 23, /repositories/new_point/app/assets/stylesheets/company.scss */
+.noodle_div {
+  background-color: lightgrey;
+}
+
+/* line 29, /repositories/new_point/app/assets/stylesheets/company.scss */
+.ball_chain_img {
+  width: 100%;
+}
+
+/* line 32, /repositories/new_point/app/assets/stylesheets/company.scss */
+.assistance_tube_img {
+  width: 100%;
+}
+
+/* line 41, /repositories/new_point/app/assets/stylesheets/company.scss */
+.expandable_hook_img {
+  width: 100%;
+}
+
+/* line 44, /repositories/new_point/app/assets/stylesheets/company.scss */
+.noodle_img {
+  width: 100%;
+}
+
+/* line 50, /repositories/new_point/app/assets/stylesheets/company.scss */
+.products_div {
+  width: 80%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+/* line 55, /repositories/new_point/app/assets/stylesheets/company.scss */
+.shading {
+  box-shadow: 10px 10px 5px #888888;
+  border: 1px solid #888888;
+}
+
+/* line 59, /repositories/new_point/app/assets/stylesheets/company.scss */
+.basic_border {
+  border: 1px solid black;
+}
+
+/* line 62, /repositories/new_point/app/assets/stylesheets/company.scss */
+.double_space {
+  line-height: 1.7em;
+}
+
+/* line 65, /repositories/new_point/app/assets/stylesheets/company.scss */
+.no_padding {
+  padding: 0px;
+}
+
+/* line 68, /repositories/new_point/app/assets/stylesheets/company.scss */
+.about_us_pic {
+  background: url(/assets/531929170-dffd4dbcebe37cf04a02f73253ed5fa89b6cabae8db4d3d2ebd5d031a1e2335c.jpg);
+}
+
+/* line 71, /repositories/new_point/app/assets/stylesheets/company.scss */
+.product_pic {
+  background: url(/assets/453171109-62f94746a3d1668315fc6c0646e38eba2f69d9e31a1ab1e3b88ef1073ec6011a.jpg);
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+
+/* line 76, /repositories/new_point/app/assets/stylesheets/company.scss */
+.green {
+  background-color: #5da17e;
+}
+
+/* line 79, /repositories/new_point/app/assets/stylesheets/company.scss */
+.small_margin {
+  margin: 5px;
+}
+
+/* line 82, /repositories/new_point/app/assets/stylesheets/company.scss */
+.close_contact_user {
+  cursor: pointer;
+  background-color: pink;
+  width: 30px;
+}
+
+/* line 87, /repositories/new_point/app/assets/stylesheets/company.scss */
+.push_right {
+  margin-right: 25px;
+  float: right;
+  margin-top: 10px;
+}
+
+/* line 92, /repositories/new_point/app/assets/stylesheets/company.scss */
+#sidebar_container {
+  background-color: darkgrey;
+}
+/* line 6, /repositories/new_point/app/assets/stylesheets/distributers.scss */
+.new_distributers_link {
+  float: right;
+}
+
+/* line 9, /repositories/new_point/app/assets/stylesheets/distributers.scss */
+.new_distributer {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+/* line 13, /repositories/new_point/app/assets/stylesheets/distributers.scss */
+.edit_distributer {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+@import "https://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import "https://daneden.github.io/animate.css/animate.min.css";
+/*-------------------------------*/
+/*           VARIABLES           */
+/*-------------------------------*/
+/* line 40, /repositories/new_point/app/assets/stylesheets/home.scss */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* line 44, /repositories/new_point/app/assets/stylesheets/home.scss */
+body,
+html {
+  height: 100%;
+  background-color: #fff;
+}
+
+/* line 50, /repositories/new_point/app/assets/stylesheets/home.scss */
+.nav .open > a {
+  background-color: transparent;
+}
+/* line 52, /repositories/new_point/app/assets/stylesheets/home.scss */
+.nav .open > a:hover {
+  background-color: transparent;
+}
+/* line 55, /repositories/new_point/app/assets/stylesheets/home.scss */
+.nav .open > a:focus {
+  background-color: transparent;
+}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+/* line 64, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  padding-left: 0;
+  transition: all 0.5s ease;
+}
+
+/* line 71, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper.toggled {
+  padding-left: 220px;
+}
+/* line 73, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 220px;
+}
+/* line 76, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper.toggled #page-content-wrapper {
+  margin-right: -220px;
+  position: absolute;
+}
+
+/* line 81, /repositories/new_point/app/assets/stylesheets/home.scss */
+#sidebar-wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  background: url(/assets/design-002bc2256d206bfb58acec6a890ae5e7fb70e884c7b63d9e310df973de91aa0d.png);
+  height: 100%;
+  left: 220px;
+  margin-left: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 1000;
+}
+/* line 94, /repositories/new_point/app/assets/stylesheets/home.scss */
+#sidebar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+/* line 103, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 220px;
+}
+/* line 110, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li {
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+}
+/* line 115, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:before {
+  background-color: #1c1c1c;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: width .2s ease-in;
+  transition: width .2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+/* line 127, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:first-child a {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+/* line 133, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(2):before {
+  background-color: #402d5c;
+}
+/* line 138, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(3):before {
+  background-color: #4c366d;
+}
+/* line 143, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(4):before {
+  background-color: #583e7e;
+}
+/* line 148, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(5):before {
+  background-color: #64468f;
+}
+/* line 153, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(6):before {
+  background-color: #704fa0;
+}
+/* line 158, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(7):before {
+  background-color: #7c5aae;
+}
+/* line 163, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(8):before {
+  background-color: #8a6cb6;
+}
+/* line 168, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:nth-child(9):before {
+  background-color: #987dbf;
+}
+/* line 173, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li:hover:before {
+  -webkit-transition: width .2s ease-in;
+  transition: width .2s ease-in;
+  width: 100%;
+}
+/* line 178, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li a {
+  color: #dddddd;
+  display: block;
+  padding: 10px 15px 10px 30px;
+  text-decoration: none;
+}
+/* line 187, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li.open:hover before {
+  -webkit-transition: width .2s ease-in;
+  transition: width .2s ease-in;
+  width: 100%;
+}
+/* line 193, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav .dropdown-menu {
+  background-color: #222222;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* line 204, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* line 209, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav > .sidebar-brand {
+  font-size: 20px;
+  height: 65px;
+  line-height: 44px;
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+/* line 218, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 32px;
+  margin-left: 80px;
+  position: fixed;
+  top: 20px;
+  width: 32px;
+  z-index: 999;
+}
+/* line 228, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger:hover {
+  outline: none;
+}
+/* line 231, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger:focus {
+  outline: none;
+}
+/* line 234, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger:active {
+  outline: none;
+}
+
+/* line 239, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+  color: black;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 1;
+  text-align: center;
+  width: 100px;
+}
+/* line 252, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+/* line 258, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed:hover .hamb-top {
+  -webkit-transition: all .35s ease-in-out;
+  top: 0;
+  background-color: black;
+}
+/* line 263, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed:hover .hamb-bottom {
+  -webkit-transition: all .35s ease-in-out;
+  bottom: 0;
+  background-color: black;
+}
+/* line 269, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed .hamb-top {
+  -webkit-transition: all .35s ease-in-out;
+  background-color: fadeout(black, 30);
+  top: 5px;
+}
+/* line 274, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed .hamb-middle {
+  background-color: fadeout(black, 30);
+  margin-top: -2px;
+  top: 50%;
+}
+/* line 279, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed .hamb-bottom {
+  -webkit-transition: all .35s ease-in-out;
+  background-color: fadeout(black, 30);
+  bottom: 5px;
+}
+
+/* line 285, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom {
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+}
+
+/* line 293, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-open .hamb-top {
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+  background-color: black;
+  margin-top: -2px;
+  top: 50%;
+}
+/* line 300, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-open .hamb-middle {
+  background-color: black;
+  display: none;
+}
+/* line 304, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+  background-color: black;
+  margin-top: -2px;
+  top: 50%;
+}
+/* line 312, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-open:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+/* line 325, /repositories/new_point/app/assets/stylesheets/home.scss */
+.hamburger.is-open:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+/*-------------------------------*/
+/*          Dark Overlay         */
+/*-------------------------------*/
+/* line 337, /repositories/new_point/app/assets/stylesheets/home.scss */
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* line 349, /repositories/new_point/app/assets/stylesheets/home.scss */
+body, html {
+  background-color: #fff;
+}
+
+/* line 349, /repositories/new_point/app/assets/stylesheets/home.scss */
+body h1, body h2, body h3, body h4 {
+  color: fadeout(black, 10);
+}
+/* line 349, /repositories/new_point/app/assets/stylesheets/home.scss */
+body p, body blockquote {
+  color: fadeout(black, 30);
+}
+/* line 349, /repositories/new_point/app/assets/stylesheets/home.scss */
+body a {
+  color: fadeout(black, 20);
+  text-decoration: underline;
+}
+/* line 349, /repositories/new_point/app/assets/stylesheets/home.scss */
+body a:hover {
+  color: black;
+}
+
+/* line 351, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_picture_header {
+  margin-top: 0px;
+  height: 400px;
+  background: url(/assets/home_top_pic-65ca436f132e288069b83d66acb187f5344768fcc02c7e64650c2d4bfac544b7.png);
+  background-size: cover;
+}
+
+/* line 357, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_info_block {
+  height: 290px;
+  text-align: center;
+}
+
+/* line 361, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_break_up_info {
+  height: 100px;
+  background-color: #5da17e;
+}
+
+/* line 366, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_bottom_info {
+  height: 250px;
+}
+
+/* line 370, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_green_bit {
+  display: block;
+  margin: auto;
+  padding: 20px 0 20px 0;
+}
+
+/* line 375, /repositories/new_point/app/assets/stylesheets/home.scss */
+.info_block_top_text {
+  padding-top: 20px;
+}
+
+/* line 378, /repositories/new_point/app/assets/stylesheets/home.scss */
+.info_block_bottom_text {
+  display: inline-block;
+  width: 500px;
+}
+
+/* line 382, /repositories/new_point/app/assets/stylesheets/home.scss */
+.home_second_green_bit {
+  display: inline-block;
+}
+
+/* line 385, /repositories/new_point/app/assets/stylesheets/home.scss */
+.info_block_bottom_div {
+  width: 300px;
+  height: 100px;
+  display: inline-block;
+}
+
+/* line 390, /repositories/new_point/app/assets/stylesheets/home.scss */
+.grey {
+  background-color: lightgrey;
+}
+
+/* line 393, /repositories/new_point/app/assets/stylesheets/home.scss */
+.white_text {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* line 397, /repositories/new_point/app/assets/stylesheets/home.scss */
+.scroll_button {
+  cursor: pointer;
+}
+
+/* line 400, /repositories/new_point/app/assets/stylesheets/home.scss */
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* line 405, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper {
+  padding-left: 0px;
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
+  height: 100%;
+}
+
+/* line 411, /repositories/new_point/app/assets/stylesheets/home.scss */
+#sidebar-wrapper {
+  margin-left: -150px;
+  left: 0px;
+  width: 210px;
+  background: url(/assets/design-002bc2256d206bfb58acec6a890ae5e7fb70e884c7b63d9e310df973de91aa0d.png);
+  position: fixed;
+  height: 100%;
+  z-index: 10000;
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
+}
+
+/* line 422, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav {
+  display: block;
+  float: left;
+  width: 210px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 430, /repositories/new_point/app/assets/stylesheets/home.scss */
+#page-content-wrapper {
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* line 436, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper.active {
+  padding-left: 150px;
+}
+
+/* line 439, /repositories/new_point/app/assets/stylesheets/home.scss */
+#wrapper.active #sidebar-wrapper {
+  left: 150px;
+}
+
+/* line 443, /repositories/new_point/app/assets/stylesheets/home.scss */
+#page-content-wrapper {
+  width: 100%;
+}
+
+/* line 447, /repositories/new_point/app/assets/stylesheets/home.scss */
+#sidebar_menu li a, .sidebar-nav li a {
+  color: #999;
+  display: block;
+  float: left;
+  text-decoration: none;
+  width: 230px;
+  border-top: 1px solid #373737;
+  border-bottom: 1px solid #1A1A1A;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+/* line 461, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar_name {
+  padding-top: 25px;
+  color: #fff;
+  opacity: .7;
+}
+
+/* line 467, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+/* line 472, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 479, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* line 484, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+/* line 490, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+/* line 494, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 499, /repositories/new_point/app/assets/stylesheets/home.scss */
+.sub_icon {
+  float: right;
+  padding-right: 25px;
+  padding-top: 10px;
+}
+
+/* line 505, /repositories/new_point/app/assets/stylesheets/home.scss */
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+/* line 510, /repositories/new_point/app/assets/stylesheets/home.scss */
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  /* line 518, /repositories/new_point/app/assets/stylesheets/home.scss */
+  #wrapper {
+    padding-left: 0px;
+    -webkit-transition: all .4s ease 0s;
+    transition: all .4s ease 0s;
+  }
+
+  /* line 522, /repositories/new_point/app/assets/stylesheets/home.scss */
+  #sidebar-wrapper {
+    left: 50px;
+  }
+
+  /* line 525, /repositories/new_point/app/assets/stylesheets/home.scss */
+  #wrapper.active {
+    padding-left: 150px;
+  }
+
+  /* line 528, /repositories/new_point/app/assets/stylesheets/home.scss */
+  #wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    -webkit-transition: all .4s ease 0s;
+    transition: all .4s ease 0s;
+  }
+}
+/* line 536, /repositories/new_point/app/assets/stylesheets/home.scss */
+.admin_login {
+  float: right;
+  color: blue;
+  background-color: grey;
+}
+
+/* line 541, /repositories/new_point/app/assets/stylesheets/home.scss */
+.new_admin {
+  margin-left: 150px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
