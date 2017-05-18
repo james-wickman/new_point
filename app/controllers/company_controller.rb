@@ -11,20 +11,11 @@ class CompanyController < ApplicationController
   	@user_location =  [0, 0] #[request.location.latitude, request.location.longitude] not working on some internets
 
   	#distributers list should be formated [distributer name, distributer address, distributer phone, url]
-  	@distributers_list = [['ADI', '1234 e 1st ave salt lake city utah 84108', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '1234 w 1st ave sandy utah 84070', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e eagle mountain, utah 84005', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com'], 
-                          ['ADI', '100 n 300 e american fork, utah 84003', '123-456-7890', 'https://www.adi.com']]
+    distributers = Distributer.all
+    @distributers_list = []
+    distributers.each do |d|
+      @distributers_list.push([d.name, d.address + ' ' + d.city + ' ' + d.state + ' ' + d.zip, d.phone, d.url])
+    end
   	@distributers_locations = []
   	@distributers_list.each do |dist|
   		coordinates = Geocoder.coordinates(dist[1])
