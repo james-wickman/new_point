@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
 
-	get 'distributers/index'
-
-	get 'distributers/new'
-
-	get 'distributers/create'
-
-	get 'distributers/edit'
-
-	get 'distributers/update'
-
-	get 'distributers/destroy'
+	resources :distributers
 
 	post 'company/send_email'
 

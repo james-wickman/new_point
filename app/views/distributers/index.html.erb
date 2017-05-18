@@ -1,2 +1,19 @@
-<h1>Distributers#index</h1>
-<p>Find me in app/views/distributers/index.html.erb</p>
+
+<%= link_to "Add Distributer", new_distributer_path, class: 'new_distributers_link' %>
+
+<% @distributers.each do |distributer| %>
+	<div style="margin-left: 150px;">
+		<%= distributer.id %> <br>
+		name: <%= distributer.name %> <br>
+		address: <%= distributer.address %>
+		<%= distributer.city %>
+		<%= distributer.state %>
+		<%= distributer.zip %> <br>
+		phone: <%= distributer.phone %> <br>
+		url: <%= distributer.url %> <br>
+		email: <%= distributer.email %> <br>
+		<%= link_to "Edit", "/distributers/#{distributer.id}/edit" %> <br>
+		<%= link_to "Delete", "/distributers/#{distributer.id}", method: :delete %>
+	</div>
+	<hr>
+<% end %>
