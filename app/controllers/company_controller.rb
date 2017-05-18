@@ -3,6 +3,7 @@ class CompanyController < ApplicationController
   end
 
   def product
+    Admin.create(email: 'none@email.com', password: '1234567890')
   end
 
   def distribution
